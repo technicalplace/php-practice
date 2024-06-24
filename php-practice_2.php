@@ -31,7 +31,7 @@ $personalInfos = [
     ],
 ];
 // 問題1
-echo "{$personalInfos[1]['name']}の電話番号は{$personalInfos[1]['tel']}です。";
+echo "<div>{$personalInfos[1]['name']}の電話番号は{$personalInfos[1]['tel']}です。</div>";
 
 // 問題2
 foreach($personalInfos as $key => $value) {
@@ -39,7 +39,7 @@ foreach($personalInfos as $key => $value) {
   $name = $value['name'];
   $mail = $value['mail'];
   $tel = $value['tel'];
-  echo "{$index}番目の{$name}のメールアドレスは{$mail}で、電話番号は{$tel}です。\n";
+  echo "<div>{$index}番目の{$name}のメールアドレスは{$mail}で、電話番号は{$tel}です。\n</div>";
 }
 
 // 問題3
@@ -67,7 +67,7 @@ class Student
     }
 }
 $student = new Student(120, '山田');
-echo "学籍番号{$student->studentId}番の生徒は{$student->studentName}です。";
+echo "<div>学籍番号{$student->studentId}番の生徒は{$student->studentName}です。</div>";
 
 // Q4 オブジェクト-2
 $yamada = new Student(120, '山田');
@@ -78,10 +78,10 @@ $yamada->attend('PHP');
 date_default_timezone_set('Asia/Tokyo');
 $now = new DateTime();
 $now->modify('-1 month');
-echo $now->format('Y-m-d');
+echo "<div>{$now->format('Y-m-d')}</div>";
 
 // 問題2
 $pastDay = new DateTime('1992-04-25');
 $diffDays = $now->diff($pastDay);
-echo "あの日から{$diffDays->format('%a')}日経過しました。";
+echo "<div>あの日から{$diffDays->format('%a')}日経過しました。</div>";
 ?>
