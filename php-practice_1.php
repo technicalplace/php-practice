@@ -71,7 +71,7 @@ hello('中田');
 
 // Q11 関数-2
 function calcTaxInPrice($price) {
-  return $price * 1.1;
+  return round($price * 1.1);
 }
 $price = 1000;
 $taxInPrice = calcTaxInPrice($price);
