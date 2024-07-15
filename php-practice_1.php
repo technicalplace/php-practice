@@ -22,14 +22,10 @@ echo "現在時刻は、{$year}年{$month}月{$date}日 {$hour}時{$minutes}分{
 
 // Q4 条件分岐-1 if文
 $device = 'mac';
-if ($device === 'windows') {
-  echo '使用OSは、windowsです。';
+if ($device === 'windows' || $deveice === 'mac') {
+  echo "使用OSは{$device}です。";
 } else {
-  if ($device === 'mac') {
-    echo '使用OSは、macです。';
-  } else {
-    echo 'どちらでもありません。';
-  }
+  echo 'どちらでもありません。';
 }
 
 // Q5 条件分岐-2 三項演算子
@@ -42,19 +38,19 @@ echo "{$prefs[2]}と{$prefs[3]}は関東地方の都道府県です。";
 
 // Q7 連想配列-1
 $array = ['東京都' => '新宿区', '神奈川県' => '横浜市', '千葉県' => '千葉市', '埼玉県' => 'さいたま市', '栃木県' => '宇都宮市', '群馬県' => '前橋市', '茨城県' => '水戸市', '愛知県' => '名古屋市', '大阪府' => '大阪市'];
-foreach($array as $key => $value) {
+foreach ($array as $key => $value) {
   echo "{$value}\n";
 }
 
 // Q8 連想配列-2
-foreach($array as $key => $value) {
+foreach ($array as $key => $value) {
   if ($key === '埼玉県') {
     echo "{$key}の県庁所在地は、{$value}です。";
   }
 }
 
 // Q9 連想配列-3
-foreach($array as $key => $value) {
+foreach ($array as $key => $value) {
   if ($key === '愛知県' || $key === '大阪府') {
     echo "{$key}は関東地方ではありません。\n";
   } else {
@@ -63,14 +59,16 @@ foreach($array as $key => $value) {
 }
 
 // Q10 関数-1
-function hello($name) {
+function hello($name)
+{
   echo "{$name}さん、こんにちは。";
 }
 hello('田中');
 hello('中田');
 
 // Q11 関数-2
-function calcTaxInPrice($price) {
+function calcTaxInPrice($price)
+{
   return round($price * 1.1);
 }
 $price = 1000;
@@ -78,14 +76,16 @@ $taxInPrice = calcTaxInPrice($price);
 echo "{$price}円の商品の税込価格は{$taxInPrice}円です。";
 
 // Q12 関数とif文
-function distinguishNum($number) {
+function distinguishNum($number)
+{
   return $number % 2 === 0 ? "{$number}は偶数です。" : "{$number}は奇数です。";
 }
 echo distinguishNum(11);
 echo distinguishNum(24);
 
 // Q13 関数とswitch文
-function evaluateGrade($result) {
+function evaluateGrade($result)
+{
   switch ($result) {
     case $result === 'A';
     case $result === 'B';
@@ -104,5 +104,3 @@ function evaluateGrade($result) {
 }
 echo evaluateGrade('A');
 echo evaluateGrade('K');
-
-?>
