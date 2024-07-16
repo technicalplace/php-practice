@@ -74,10 +74,10 @@ foreach ($array as $key => $value) {
 // Q10 関数-1
 function hello($name)
 {
-  echo "{$name}さん、こんにちは。";
+  return "{$name}さん、こんにちは。";
 }
-hello('田中');
-hello('中田');
+echo hello('田中');
+echo hello('中田');
 
 // Q11 関数-2
 function calcTaxInPrice($price)
