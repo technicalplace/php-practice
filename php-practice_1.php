@@ -100,14 +100,14 @@ echo distinguishNum(24);
 function evaluateGrade($result)
 {
   switch ($result) {
-    case $result === 'A';
-    case $result === 'B';
+    case 'A';
+    case 'B';
       return '合格です。';
       break;
-    case $result === 'C':
+    case 'C':
       return '合格ですが追加課題があります。';
       break;
-    case $result === 'D';
+    case 'D';
       return '不合格です。';
       break;
     default:
