@@ -12,13 +12,8 @@ echo $num / 2;
 // Q3 日付操作
 // 日付のタイムゾーンを日本にする
 date_default_timezone_set('Asia/Tokyo');
-$year = date('Y');
-$month = date('m');
-$date = date('d');
-$hour = date('H');
-$minutes = date('i');
-$second = date('s');
-echo "現在時刻は、{$year}年{$month}月{$date}日 {$hour}時{$minutes}分{$second}秒です。";
+$now = date('Y年m月d日 H時i分s秒');
+echo "現在時刻は、{$now}です。";
 
 // Q4 条件分岐-1 if文
 $device = 'mac';
