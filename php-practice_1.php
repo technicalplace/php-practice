@@ -51,8 +51,8 @@ $array = [
   '愛知県' => '名古屋市',
   '大阪府' => '大阪市'
 ];
-foreach ($array as $key => $value) {
-  echo "{$value}\n";
+foreach ($array as $pref => $prefCapital) {
+  echo "{$prefCapital}\n";
 }
 
 // Q8 連想配列-2
