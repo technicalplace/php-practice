@@ -14,27 +14,27 @@ for ($i = 1; $i <= 100; $i++) {
 
 // Q2 多次元連想配列
 $personalInfos = [
-    [
-        'name' => 'Aさん',
-        'mail' => 'aaa@mail.com',
-        'tel' => '09011112222'
-    ],
-    [
-        'name' => 'Bさん',
-        'mail' => 'bbb@mail.com',
-        'tel' => '08033334444'
-    ],
-    [
-        'name' => 'Cさん',
-        'mail' => 'ccc@mail.com',
-        'tel' => '09055556666'
-    ],
+  [
+    'name' => 'Aさん',
+    'mail' => 'aaa@mail.com',
+    'tel' => '09011112222'
+  ],
+  [
+    'name' => 'Bさん',
+    'mail' => 'bbb@mail.com',
+    'tel' => '08033334444'
+  ],
+  [
+    'name' => 'Cさん',
+    'mail' => 'ccc@mail.com',
+    'tel' => '09055556666'
+  ],
 ];
 // 問題1
 echo "<div>{$personalInfos[1]['name']}の電話番号は{$personalInfos[1]['tel']}です。</div>";
 
 // 問題2
-foreach($personalInfos as $key => $value) {
+foreach ($personalInfos as $key => $value) {
   $index = $key + 1;
   $name = $value['name'];
   $mail = $value['mail'];
@@ -44,7 +44,7 @@ foreach($personalInfos as $key => $value) {
 
 // 問題3
 $ageList = [25, 30, 18];
-foreach($personalInfos as $key => $personalInfo) {
+foreach ($personalInfos as $key => $personalInfo) {
   $personalInfos[$key]['age'] = $ageList[$key];
 }
 var_dump($personalInfos);
@@ -52,19 +52,19 @@ var_dump($personalInfos);
 // Q3 オブジェクト-1
 class Student
 {
-    public $studentId;
-    public $studentName;
+  public $studentId;
+  public $studentName;
 
-    public function __construct($id, $name)
-    {
-        $this->studentId = $id;
-        $this->studentName = $name;
-    }
+  public function __construct($id, $name)
+  {
+    $this->studentId = $id;
+    $this->studentName = $name;
+  }
 
-    public function attend($lang)
-    {
-        echo "{$this->studentName}は{$lang}の授業に出席しました。学籍番号：{$this->studentId}";
-    }
+  public function attend($lang)
+  {
+    echo "{$this->studentName}は{$lang}の授業に出席しました。学籍番号：{$this->studentId}";
+  }
 }
 $student = new Student(120, '山田');
 echo "<div>学籍番号{$student->studentId}番の生徒は{$student->studentName}です。</div>";
@@ -84,4 +84,5 @@ echo "<div>{$now->format('Y-m-d')}</div>";
 $pastDay = new DateTime('1992-04-25');
 $diffDays = $now->diff($pastDay);
 echo "<div>あの日から{$diffDays->format('%a')}日経過しました。</div>";
-?>
+
+// テスト
