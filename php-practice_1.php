@@ -28,7 +28,7 @@ $age = 20;
 echo $age >= 18 ? '成人です。' : '未成年です。';
 
 // Q6 配列
-$prefs = [
+$kantoPrefArray = [
   '茨城県',
   '群馬県',
   '栃木県',
@@ -37,10 +37,10 @@ $prefs = [
   '東京都',
   '神奈川県'
 ];
-echo "{$prefs[2]}と{$prefs[3]}は関東地方の都道府県です。";
+echo "{$kantoPrefArray[2]}と{$kantoPrefArray[3]}は関東地方の都道府県です。";
 
 // Q7 連想配列-1
-$array = [
+$kantoPrefs = [
   '東京都' => '新宿区',
   '神奈川県' => '横浜市',
   '千葉県' => '千葉市',
@@ -48,26 +48,32 @@ $array = [
   '栃木県' => '宇都宮市',
   '群馬県' => '前橋市',
   '茨城県' => '水戸市',
+];
+
+$noKantoPrefs = [
   '愛知県' => '名古屋市',
   '大阪府' => '大阪市'
 ];
-foreach ($array as $pref => $prefCapital) {
+
+$mergeArray = array_merge($kantoPrefs, $noKantoPrefs);
+
+foreach ($kantoPrefs as $pref => $prefCapital) {
   echo "{$prefCapital}\n";
 }
 
 // Q8 連想配列-2
-foreach ($array as $key => $value) {
-  if ($key === '埼玉県') {
-    echo "{$key}の県庁所在地は、{$value}です。";
+foreach ($kantoPrefs as $pref => $capital) {
+  if ($pref === '埼玉県') {
+    echo "{$pref}の県庁所在地は、{$capital}です。";
   }
 }
 
 // Q9 連想配列-3
-foreach ($array as $key => $value) {
-  if ($key === '愛知県' || $key === '大阪府') {
-    echo "{$key}は関東地方ではありません。\n";
+foreach ($mergeArray as $pref => $capital) {
+  if (!in_array($pref, $kantoPrefArray, true)) {
+    echo "{$pref}は関東地方ではありません。\n";
   } else {
-    echo "{$key}の県庁所在地は、{$value}です。\n";
+    echo "{$pref}の県庁所在地は、{$capital}です。\n";
   }
 }
 
