@@ -47,6 +47,9 @@ $ageList = [25, 30, 18];
 foreach ($personalInfos as $key => $personalInfo) {
   $personalInfos[$key]['age'] = $ageList[$key];
 }
+// foreach ($ageList as $index => $age) {
+//   $personalInfos[$index]['age'] = $age;
+// }
 var_dump($personalInfos);
 
 // Q3 オブジェクト-1
@@ -86,3 +89,5 @@ $diffDays = $now->diff($pastDay);
 echo "<div>あの日から{$diffDays->format('%a')}日経過しました。</div>";
 
 // テスト
+
+// テストコミット
