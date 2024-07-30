@@ -88,8 +88,4 @@ $pastDay = new DateTime('1992-04-25');
 $diffDays = $now->diff($pastDay);
 echo "<div>あの日から{$diffDays->format('%a')}日経過しました。</div>";
 
-// テスト
-
-// テストコミット
-
-// テストコミット2
+// 一回目のコミット
