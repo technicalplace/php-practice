@@ -89,3 +89,6 @@ $diffDays = $now->diff($pastDay);
 echo "<div>あの日から{$diffDays->format('%a')}日経過しました。</div>";
 
 // 一回目のコミット
+
+
+// 二回目のコミット
